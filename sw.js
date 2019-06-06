@@ -42,6 +42,9 @@
  * - It resolves to the Response associated with the first matching request in the Cache object.
  * - If no match is found in cache for the request, the Promise resolves to undefined, here we can do the fetch() ourselves.
  *
+ * cache.put()
+ * - Allows key/value pairs to be added to the current Cache object.
+ *
  * event
  * - When handling install event check InstallEvent interface docs
  * - When handling activate event check ExtendableEvent interface docs
@@ -51,9 +54,9 @@
 const cacheName = 'test-v1';
 
 const cacheAssets = [
-	'index.html',
-	'style.css',
-	'main.js',
+	'/index.html',
+	'/style.css',
+	'/main.js',
 ];
 
 self.addEventListener( 'install', event => {
@@ -94,7 +97,9 @@ self.addEventListener( 'fetch', event => {
 
 					return networkResponse;
 				} );
-			} ).catch(  error => throw error );
+			} ).catch(  error => {
+				throw error;
+			} );
 
 		} )
 	);
