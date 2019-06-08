@@ -4,12 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "http-server"
+    "dev": "node server.js",
+    "build": "next build",
+	"start": "next start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "http-server": "^0.11.1"
+  "devDependencies": {},
+  "dependencies": {
+    "express": "^4.17.1",
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-markdown": "^4.0.8"
   }
 }
