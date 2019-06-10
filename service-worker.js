@@ -22,7 +22,7 @@ workbox.precaching.precacheAndRoute([
     "revision": "640a7b25992995be509727fa93ca8c9a"
   },
   {
-    "url": "webbox.config.js",
-    "revision": "0f3b96a6d6e21b0f45f57c4ac8539c25"
+    "url": "workbox.config.js",
+    "revision": "a7e2df4d9798f56c743b06ee74daf30f"
   }
 ]);

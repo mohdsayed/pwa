@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "http-server",
-	"build-sw": "node webbox.config.js"
+	"build-sw": "node workbox.config.js"
   },
   "keywords": [],
   "author": "",
