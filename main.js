@@ -2,8 +2,12 @@ const title = document.getElementById( 'title' );
 
 title.textContent = 'Updated with JS';
 
-if ( 'serviceWorker' in navigator ) {
+// Check that service workers are registered
+if ('serviceWorker' in navigator) {
 
-	navigator.serviceWorker.register( '/sw.js' );
+	// Use the window load event to keep the page load performant
+	window.addEventListener('load', () => {
+		navigator.serviceWorker.register('/service-worker.js');
+	});
 
 }
